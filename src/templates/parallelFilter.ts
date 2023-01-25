@@ -10,6 +10,7 @@ export function parallelFilter(updateParallelFilter) {
       @change="${(e) => updateParallelFilter(e.target.value)}"
     >
       <option value="all">All</option>
+      <option value="universal">Universal</option>
       <option value="marcolian">Marcolian</option>
       <option value="kathari">Kathari</option>
       <option value="earthen">Earthen</option>

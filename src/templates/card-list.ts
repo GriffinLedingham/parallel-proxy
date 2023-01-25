@@ -17,6 +17,7 @@ export function cardList(parallelFilter, typeFilter, nameFilter, addCard) {
           name: card.title,
           mana_cost: card.cost.toString(),
           type_line: card.card_type,
+          subtype: card.subtype?.toString(),
           attack: card.attack?.toString(),
           health: card.health?.toString(),
           active_text: card.function_text,

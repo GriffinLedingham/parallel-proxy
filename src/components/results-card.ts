@@ -80,6 +80,7 @@ class ResultsCardElement extends LitElement {
             name: response.title,
             mana_cost: response.cost.toString(),
             type_line: response.card_type,
+            subtype: response.subtype?.toString(),
             attack: response.attack?.toString(),
             health: response.health?.toString(),
             active_text: response.function_text,

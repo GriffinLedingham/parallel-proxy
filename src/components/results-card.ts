@@ -1,7 +1,7 @@
 import { customElement, html, LitElement, property, TemplateResult } from 'lit-element';
 import { cardTemplate } from '../card-templates';
-import { ScryfallError } from '../scryfall';
-import { ScryfallCard } from '../scryfall/ScryfallCard';
+import { ParallelCardFunctions } from '../data/parallelFunctions';
+import { ParallelCard } from '../parallel/parallelCard';
 import { resultsCardStyles } from './results-card-styles';
 
 @customElement('mtgp-results-card')
@@ -16,7 +16,7 @@ class ResultsCardElement extends LitElement {
     loading = true;
 
     @property({ type: Object })
-    card: ScryfallCard | ScryfallError;
+    card: ParallelCard;
 
     static get styles() {
         return resultsCardStyles;
@@ -33,7 +33,7 @@ class ResultsCardElement extends LitElement {
                 <div class="card_frame dont_print">
                     <p class="loading">Loading...</p>
                 </div>`;
-            } else if (!this.card || this.card.object == 'error') {
+            } else if (!this.card ) {
                 template = html`
                 <div class="card_frame dont_print">
                     <p class="card_not_found">Card "${this.name}" not found.<br><br><i>This will not be printed.</i></p>
@@ -74,8 +74,21 @@ class ResultsCardElement extends LitElement {
     async fetchCard() {
         this.loading = true;
 
-        const response = await fetch(`https://api.scryfall.com/cards/named?fuzzy=${encodeURIComponent(this.name)}`);
-        this.card = await response.json();
+        // const response = await fetch(`https://api.scryfall.com/cards/named?fuzzy=${encodeURIComponent(this.name)}`);
+        const response = ParallelCardFunctions.find((card) => card.title.toLowerCase() === this.name.toLowerCase());
+        this.card = {
+            name: response.title,
+            mana_cost: response.cost.toString(),
+            type_line: response.card_type,
+            attack: response.attack?.toString(),
+            health: response.health?.toString(),
+            active_text: response.function_text,
+            passive_text: response?.passive_ability,
+            parallel: response.parallel
+
+        }
+
+
 
         this.loading = false;
     }

@@ -1,16 +1,12 @@
-import { ScryfallCard, ScryfallCardFace } from '../scryfall';
-import { innerCreature } from './inner-creature';
-import { innerNonCreature } from './inner-noncreature';
-import { innerPlaneswalker } from './inner-planeswalker';
+import { ParallelCard } from '../parallel/parallelCard';
+import { innerUnit } from './inner-unit';
+import { innerNonUnit } from './inner-nonunit';
 
-export function inner(face: ScryfallCard | ScryfallCardFace) {
+export function inner(face: ParallelCard) {
     const type = face.type_line;
 
-    if (type.includes('Creature') || type.includes('Vehicle')) {
-        return innerCreature(face);
+    if (type.includes('unit')) {
+        return innerUnit(face);
     }
-    if (type.includes('Planeswalker')) {
-        return innerPlaneswalker(face);
-    }
-    return innerNonCreature(face);
+    return innerNonUnit(face);
 }

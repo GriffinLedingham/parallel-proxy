@@ -1,8 +1,11 @@
 {
-  "name": "mtgproxy",
+  "name": "parallel-proxy",
   "version": "1.0.0",
   "repository": "git@github.com:fklingler/mtgproxy",
-  "author": "François KLINGLER <francois@fklingler.com>",
+  "authors": [
+    "François KLINGLER <francois@fklingler.com>",
+    "Griffin Ledingham <gcledingham@gmail.com>"
+  ],
   "license": "MIT",
   "private": true,
   "scripts": {

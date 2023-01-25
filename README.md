@@ -1,17 +1,16 @@
-# [MTG Proxy](https://fklingler.github.io/mtgproxy)
+# [Parallel TCG Playtest Proxy](https://griffinledingham.github.io/parallel-proxy)
 
-![Build to Github Pages](https://github.com/fklingler/mtgproxy/workflows/Build%20to%20Github%20Pages/badge.svg?branch=master)
+![Build to Github Pages](https://github.com/griffinledingham/parallel-proxy/workflows/Build%20to%20Github%20Pages/badge.svg?branch=master)
 
-[A simple website](https://fklingler.github.io/mtgproxy) to make text proxies of your Magic: The Gathering cards.
+[A simple website](https://griffinledingham.github.io/parallel-proxy) to make text proxies of your Parallel Alpha TCG cards.
 
-It uses the amazing [Scryfall](https://www.scryfall.com) API.
-Thanks to [Harubex](https://github.com/Harubex) and its [scryfall](https://github.com/Harubex/scryfall) project for the [types](https://github.com/Harubex/scryfall/tree/master/src).
+It uses data sourced from the [parallel.life](https://www.parallel.life) API.
 
-It is inspired by the [proxygen project by Dryvnt](https://gitlab.com/Dryvnt/proxygen). The card templates are directly adapted from this project.
+It is based on the [MTG Proxy](https://github.com/fklingler/mtgproxy). The card templates are directly adapted from this project.
 
 ## Development
 
-`yarn install`  
+`yarn install`
 `yarn dev`
 
 You can then open the dev build on [http://localhost:8080](http://localhost:8080)
@@ -20,4 +19,4 @@ You can then open the dev build on [http://localhost:8080](http://localhost:8080
 
 `yarn build`
 
-It is built automatically by Github Actions, so you can always find the master version on [https://fklingler.github.io/mtgproxy](https://fklingler.github.io/mtgproxy).
+It is built automatically by Github Actions, so you can always find the master version on [https://griffinledingham.github.io/parallel-proxy](https://griffinledingham.github.io/parallel-proxy).

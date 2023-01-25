@@ -2,7 +2,7 @@
 
 ![Build to Github Pages](https://github.com/griffinledingham/parallel-proxy/workflows/Build%20to%20Github%20Pages/badge.svg?branch=master)
 
-[A simple website](https://griffinledingham.github.io/parallel-proxy) to make text proxies of your Parallel Alpha TCG cards.
+[A website](https://griffinledingham.github.io/parallel-proxy) to make text proxies of your Parallel Alpha TCG cards.
 
 It uses data sourced from the [parallel.life](https://www.parallel.life) API. Data may need to be repaired in cases that the parallel.life dataset includes inconsistencies with card spelling, whitespace, etc.
 

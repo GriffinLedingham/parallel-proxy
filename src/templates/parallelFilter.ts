@@ -2,7 +2,9 @@ import { html } from "lit-html";
 
 export function parallelFilter(updateParallelFilter) {
   return html`
-    Parallel: <select
+    Parallel:
+    <select
+      style="border: 1px solid grey;"
       name="parallel"
       id="parallel"
       @change="${(e) => updateParallelFilter(e.target.value)}"

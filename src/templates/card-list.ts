@@ -4,13 +4,14 @@ import { ParallelCard } from "../parallel/parallelCard";
 import { ParallelCardFunctions } from "../data/parallelFunctions";
 import { cardListTemplate } from "../card-templates";
 
-export function cardList(parallelFilter, typeFilter, addCard) {
+export function cardList(parallelFilter, typeFilter, nameFilter, addCard) {
   return html`
     <div class="card_list" style="width:100%;text-align:left;">
       ${ParallelCardFunctions.filter(
         (card) =>
           (card.parallel === parallelFilter || parallelFilter === "all") &&
-          (card.card_type === typeFilter || typeFilter === "all")
+          (card.card_type === typeFilter || typeFilter === "all") &&
+          (card.title.toLowerCase().includes(nameFilter.toLowerCase()) || nameFilter === "")
       ).map((card) =>
         cardListTemplate(addCard, {
           name: card.title,

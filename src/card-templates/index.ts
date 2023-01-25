@@ -8,7 +8,7 @@ export function cardTemplate(card: ParallelCard) {
 export function cardListTemplate(addCard: Function, card: ParallelCard) {
     // onclick add the card to #cards
     return html`
-    <div @click="${() => addCard(card.name)}">
+    <div style="cursor:pointer;" @click="${() => addCard(card.name)}">
     ${layoutNormal(card)}
     </div>
     `;

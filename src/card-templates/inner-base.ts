@@ -20,6 +20,7 @@ export function innerBase(face: ParallelCard) {
 }
 
 function oracleText(oracleText: string) {
+    if(!oracleText) return html``;
     return oracleText.split('\n').map(line => html`
         <p class="oracle_p">
             ${unsafeHTML(line.replace('(', '<i>(').replace(')', ')<i>'))}

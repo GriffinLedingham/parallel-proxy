@@ -4,7 +4,7 @@
 
 [A simple website](https://griffinledingham.github.io/parallel-proxy) to make text proxies of your Parallel Alpha TCG cards.
 
-It uses data sourced from the [parallel.life](https://www.parallel.life) API.
+It uses data sourced from the [parallel.life](https://www.parallel.life) API. Data may need to be repaired in cases that the parallel.life dataset includes inconsistencies with card spelling, whitespace, etc.
 
 It is based on the [MTG Proxy](https://github.com/fklingler/mtgproxy). The card templates are directly adapted from this project.
 

@@ -11,12 +11,9 @@ export function innerBase(face: ParallelCard) {
         <p class="typeline" style="text-transform:capitalize;">${face.parallel}</p>
         <br>
         <br>
-        <br>
-        <br>
-        <br>
-        <br>
         <p class="typeline" style="text-transform:capitalize;">${face.type_line}</p>
-        <div class="oracle_div">${oracleText(face.active_text)}</div>`;
+        <div class="oracle_div">${oracleText(face.active_text)}</div>
+        <div class="oracle_div">${oracleText(face.passive_text)}</div>`;
 }
 
 function oracleText(oracleText: string) {
